@@ -275,6 +275,25 @@
 
 
 
+
+
+
+<script>
+
+    window.onload = function(){
+        var path = 'https://jaeloree.top'; //这里要改成你博客的地址
+        var localhostItem = String(window.location).split(path)[1];
+        var LiNode = document.querySelectorAll('#menu > li > a')
+
+        for(var i = 0; i< LiNode.length;i++){
+            var item = String(LiNode[i].href).split(path)[1];
+            if(item == localhostItem && item != undefined){
+                LiNode[i].setAttribute('style','border-bottom:1px solid black');
+            }
+        }
+    };
+
+</script>
  </div>
     </header>
 
@@ -400,7 +419,17 @@
       
         
           
-            
+            <h1 id="this-is-a-firsttitle"><a href="#this-is-a-firsttitle" class="headerlink" title="this is a firsttitle"></a>this is a firsttitle</h1><h2 id="this-is-a-subtitle"><a href="#this-is-a-subtitle" class="headerlink" title="this is a subtitle"></a>this is a subtitle</h2><p><em>斜体</em></p>
+<p><strong>粗体</strong></p>
+<p>分隔线：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p><strong><em>粗斜体</em></strong></p>
+<p><del>删除线</del></p>
+
           
         
       
