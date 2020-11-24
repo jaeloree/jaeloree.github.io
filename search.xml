@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test1</title>
-    <url>/2020/11/09/test1/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SuJu-10th-Anniversary</title>
-    <url>/2020/11/11/SuJu-10th-Anniversary/</url>
-    <content><![CDATA[<h1 id="this-is-a-firsttitle"><a href="#this-is-a-firsttitle" class="headerlink" title="this is a firsttitle"></a>this is a firsttitle</h1><h2 id="this-is-a-subtitle"><a href="#this-is-a-subtitle" class="headerlink" title="this is a subtitle"></a>this is a subtitle</h2><a id="more"></a>
-
-<p><em>斜体</em></p>
-<p><strong>粗体</strong></p>
-<p>分隔线：</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<p><strong><em>粗斜体</em></strong></p>
-<p><del>删除线</del></p>
-]]></content>
-      <categories>
-        <category>追星</category>
-      </categories>
-      <tags>
-        <tag>suju</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CentOS下各种环境及软件的安装1</title>
     <url>/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.cnblogs.com/sxdcgaq8080/p/7492426.html">https://www.cnblogs.com/sxdcgaq8080/p/7492426.html</a></p>
@@ -194,12 +160,12 @@
 <p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/59.jpg" alt="59"></p>
 <p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/60.jpg" alt="60"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/61.jpg" alt="61"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/62.jpg" alt="62"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/63.jpg" alt="63"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/64.jpg" alt="64"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/65.jpg" alt="65"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/66.jpg" alt="66"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/67.jpg" alt="67"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/68.jpg" alt="68"></p>
 <p>启动服务</p>
-<p><img src="https://uploader.shimo.im/f/BwBX5cwvaL0njUHF.png!thumbnail" alt="图片"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/69.jpg" alt="69"></p>
 <p>浏览器访问</p>
-<p><img src="https://uploader.shimo.im/f/lomoQTlu85gR5cfi.png!thumbnail" alt="图片"></p>
-<p><img src="https://uploader.shimo.im/f/3D5OAP4kgncXzryB.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/Y0OppkSWHG4oVZ4r.png!thumbnail" alt="图片"></p>
-<p>停止服务<img src="https://uploader.shimo.im/f/Ztf2yNI7JIIkHNtq.png!thumbnail" alt="图片"></p>
-<p><img src="https://uploader.shimo.im/f/qmdrVcGtL5oh1c7X.png!thumbnail" alt="图片"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/70.jpg" alt="70"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/71.jpg" alt="71"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/72.jpg" alt="72"></p>
+<p>停止服务<br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/73.jpg" alt="73"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/74.jpg" alt="74"></p>
 <hr>
 <h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><h2 id="参考资料-2"><a href="#参考资料-2" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.cnblogs.com/wishwzp/p/7113410.html">https://www.cnblogs.com/wishwzp/p/7113410.html</a></p>
 <h2 id="环境预备"><a href="#环境预备" class="headerlink" title="环境预备"></a>环境预备</h2><p>首先安装JDK，再进行Tomcat的安装</p>
@@ -380,5 +346,46 @@
 <p>重启系统，检查mysql服务是否启动</p>
 <p><img src="https://uploader.shimo.im/f/XfCQ1QJ90jQuPTqJ.png!thumbnail" alt="图片"></p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux学习记录</title>
+    <url>/2020/11/24/Linux%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>linux, 命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SuJu-10th-Anniversary</title>
+    <url>/2020/11/24/SuJu/</url>
+    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h1 id="Epsoide"><a href="#Epsoide" class="headerlink" title="Epsoide"></a>Epsoide</h1><h1 id="Music"><a href="#Music" class="headerlink" title="Music"></a>Music</h1>]]></content>
+      <categories>
+        <category>追星</category>
+      </categories>
+      <tags>
+        <tag>suju</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAMAMOO</title>
+    <url>/2020/11/24/MAMAMOO/</url>
+    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h1 id="Epsoide"><a href="#Epsoide" class="headerlink" title="Epsoide"></a>Epsoide</h1><h1 id="Music"><a href="#Music" class="headerlink" title="Music"></a>Music</h1>]]></content>
+      <categories>
+        <category>追星</category>
+      </categories>
+      <tags>
+        <tag>mamamoo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>问题记录</title>
+    <url>/2020/11/24/hexo%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
