@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jaeloree" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Java参考资料https:&#x2F;&#x2F;www.cnblogs.com&#x2F;sxdcgaq8080&#x2F;p&#x2F;7492426.html 自查系统首先查看系统是否自带JDK">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS下各种环境及软件的安装1">
+<meta property="og:url" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="Jaeloree">
+<meta property="og:description" content="Java参考资料https:&#x2F;&#x2F;www.cnblogs.com&#x2F;sxdcgaq8080&#x2F;p&#x2F;7492426.html 自查系统首先查看系统是否自带JDK">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/1.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/2.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/3.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/4.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/5.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/6.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/7.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/8.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/9.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/10.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/11.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/12.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/13.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/14.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/15.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/16.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/17.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/18.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/19.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/20.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/21.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/22.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/23.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/24.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/25.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/26.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/27.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/28.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/29.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/30.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/31.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/32.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/33.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/34.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/35.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/36.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/37.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/38.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/39.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/40.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/41.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/42.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/43.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/44.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/45.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/46.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/47.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/48.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/49.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/50.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/51.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/52.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/53.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/54.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/55.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/56.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/57.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/58.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/59.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/60.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/61.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/62.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/63.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/64.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/65.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/66.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/67.jpg">
+<meta property="og:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/68.jpg">
+<meta property="og:image" content="https://uploader.shimo.im/f/BwBX5cwvaL0njUHF.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/lomoQTlu85gR5cfi.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/3D5OAP4kgncXzryB.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/Y0OppkSWHG4oVZ4r.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/Ztf2yNI7JIIkHNtq.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/qmdrVcGtL5oh1c7X.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/2NOdQDbHZzU5abzq.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/J6Ezm3DHYUsx2d0Q.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/uOOiTjUoU6I6itfo.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/OjkqNEQ0LVMs2aMP.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/uNN3hRm7rQ0j2kJQ.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/VyBT5AO5EJ0aB1ES.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/ksptriw30p0CQOYU.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/TJjMp4pUJrYcrFDI.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/0pTdZoAytjUqL1wd.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/Q0AWX2vu8SIKKx9q.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/01WD5D8P8BQcaqf9.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/SFbHL1wqKKI2cY6s.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/w96zAEXURDMkUQ8l.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/EWAlLJMnAAUaquB6.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/Z8ZyVhT81TU2m7HM.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/4eBpsPt5cmQsZdrI.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/Jg9YwhU8ZfwXgdNS.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/m3VzER9S6LwhsOWv.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/nDMhQEIMNCUg7C9D.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/c537EKRDUCUwObs2.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/I1zK1ftwAvYWtMGG.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/TAXaees6q6UTpQoe.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/vWW7v2RMuGocnwPq.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/gzgEM0WFXsAt0w0i.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/xCuUlpBc6EgsdEF4.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/tftu4JPeinYfDB5J.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/jCwEd0JPhyMvVMOM.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/ZFFfXomwXS0Y8AkU.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/dMg95P55XcsUxeKG.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/18mIsg4zzOk73d3h.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/yiEoIwu6SuE6MMu8.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/PXilnHJeKnwEWr8j.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/RrQFsoGARY8tAnoE.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/EKWJkvZJBokJx7MW.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/Xc708AekvbUcd8Rr.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/gDIOMaF3JMw1GeCG.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/ql3sE5NPV0wW4tiK.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/h0KCqxijBVc3RJOT.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/3fDAfDjKxQsCt3zK.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/TuV6HcqqBPUABDTA.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/XUPFV67sXSMw6fqe.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/2h0D18RspH44zzD7.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/VtA357IPvNI3QSgK.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/3SytaNWI0xo9YCz1.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/LdDFfCN6biM521yR.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/hq8cwIxlf3sOdQWz.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/ARnM3idlJNUM45iC.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/r2ayxz076h4PSui6.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/o15ouXFSzR4j48bZ.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/RMTLNANlMx0PLOoM.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/S0E27hLKbYg0T8TD.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/pYej9VjWKSI7cC2I.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/hR2f5O4Yx5UpbX6a.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/2gNW0kg4De4Repry.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/pFgAXTmqkW8a6bnr.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/v8yLOBbqmb8Sy7Ke.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/ZzuQDXfkxYovt7Mj.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/ozawWbTzbbUD3CrS.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/2jA28aQhh4IHOL7b.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/OUYzvJXhCsYONYft.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/l1yRBgYCZh47ejZn.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/7MOuXrHD5R81LEAy.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/68J3OyUmMvc89IwQ.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/QXKF359Inncc4rv1.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/KEdPmaZAxKs67iO5.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/NYPI86ToNQADudx4.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/UtIzXls3cP4LzGnv.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/S9618jvZOZEIsCzg.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/MgFGoE0WKuUlZzkb.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/B5EBkOLAvjIlPGHr.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/S632GRyePCAFd8F7.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/n0Sm781pm3ohRXLx.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/h6j9E0HdbKYaQwOf.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/W0mhmkk9qCwnxmAQ.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/jt71RMhySHQBUyAo.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/PfYl49qM3ZQzZDmE.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/UNTDoZmnNwwC9KDA.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/CTH2gXH0XUIX0Fnb.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/TYuIxIBHvvQafeS1.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/WXlutNlPOjstBHQh.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/Umc2cnyC28cpDwg3.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/DxNx0nrrvzYoDtbI.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/37lC1IuZFeAUWATr.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/oC6RQq80iUoIZHl1.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/6H1ZAt0yd2wZxyYz.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/BMYdzSZjIAIpyuNt.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/qs0v6kqHZo0wRdLY.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/0dhOYmGQH10HMG1r.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/oDUD0twF56snGp7n.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/UJEaC4f0O5YlsRlr.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/2EzJ7FFRHcIIsIa4.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/xy6FftpDuSQXQpEf.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/R9pkXAT84fokPGmO.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/43LpT6jkJRAa0X8z.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/p6IyY7Pl7ggszdF8.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/tlk5haU6UOIr21Na.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/WzDuORQiYwE4TJY5.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/c4VM4i629nIetn8y.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/IeEa2JCy1pwnyMOr.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/EAc8SnHqqGIm4QVz.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/NMQSZvoz8CAsmpQS.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/kn7V65Dnrj00ww4T.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/M87gTZqh2DYjkgpN.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/XfCQ1QJ90jQuPTqJ.png!thumbnail">
+<meta property="article:published_time" content="2020-11-24T07:56:10.000Z">
+<meta property="article:modified_time" content="2020-11-24T08:19:50.798Z">
+<meta property="article:author" content="jaeloree">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2020/11/24/CentOS下各种环境及软件的安装/"/>
+
+
+
+
+
+  <title>CentOS下各种环境及软件的安装1 | Jaeloree</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a target="_blank" rel="noopener" href="https://github.com/jaeloree" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jaeloree</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">This is my wonderland</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-公益">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于本站">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于本站
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+
+
+
+<script>
+
+    window.onload = function(){
+        var path = 'https://jaeloree.top'; //这里要改成你博客的地址
+        var localhostItem = String(window.location).split(path)[1];
+        var LiNode = document.querySelectorAll('#menu > li > a')
+
+        for(var i = 0; i< LiNode.length;i++){
+            var item = String(LiNode[i].href).split(path)[1];
+            if(item == localhostItem && item != undefined){
+                LiNode[i].setAttribute('style','border-bottom:1px solid black');
+            }
+        }
+    };
+
+</script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaeloree">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CentOS下各种环境及软件的安装1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-11-24T15:56:10+08:00">
+                2020-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sxdcgaq8080/p/7492426.html">https://www.cnblogs.com/sxdcgaq8080/p/7492426.html</a></p>
+<h2 id="自查系统"><a href="#自查系统" class="headerlink" title="自查系统"></a>自查系统</h2><p>首先查看系统是否自带JDK</p>
+<a id="more"></a>
+
+<p><a href="1.jpg">1</a></p>
+<!-- <img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/1.jpg" class="" title="this is a test"> -->
+
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/2.jpg" alt="2"></p>
+<p>卸载系统自带的OpenJDK以及相关的java文件</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/3.jpg" alt="3"></p>
+<p>完整的删除文件的命令，在命令窗口键入：</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/4.jpg" alt="4"></p>
+<p>注意：noarch文件可以不用删除</p>
+<p>检查是否删除成功</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/5.jpg" alt="5"></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载系统适合的JDK</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/6.jpg" alt="6"></p>
+<p>将安装包做个备份</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/7.jpg" alt="7"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/8.jpg" alt="8"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/9.jpg" alt="9"></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>创建解压目录，将安装包复制到此目录下</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/10.jpg" alt="10"></p>
+<p>解压</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/11.jpg" alt="11"></p>
+<p>删除压缩包</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/12.jpg" alt="12"></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/13.jpg" alt="13"></p>
+<p>在文本的最后一行粘贴如下：</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/14.jpg" alt="14"></p>
+<p>让刚刚设置的环境变量生效</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/15.jpg" alt="15"></p>
+<h2 id="检查是否成功"><a href="#检查是否成功" class="headerlink" title="检查是否成功"></a>检查是否成功</h2><p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/16.jpg" alt="16"></p>
+<hr>
+<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="参考资料-1"><a href="#参考资料-1" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/a774630093/article/details/79270080">https://blog.csdn.net/a774630093/article/details/79270080</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/moxiaoan/p/5683743.html">https://www.cnblogs.com/moxiaoan/p/5683743.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weiyangdong/article/details/79540217">https://blog.csdn.net/weiyangdong/article/details/79540217</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zwldx/article/details/81609120">https://blog.csdn.net/zwldx/article/details/81609120</a></p>
+<h2 id="mysql的repo源"><a href="#mysql的repo源" class="headerlink" title="mysql的repo源"></a>mysql的repo源</h2><p>获取repo源</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/17.jpg" alt="17"></p>
+<p>安装repo源</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/18.jpg" alt="18"></p>
+<p>查看</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/19.jpg" alt="19"></p>
+<h2 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h2><p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/20.jpg" alt="20"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/21.jpg" alt="21"></p>
+<p>再次查看</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/22.jpg" alt="22"></p>
+<p>登录</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/23.jpg" alt="23"></p>
+<p>改变、var/lib/mysql的所属用户</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/24.jpg" alt="24"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/25.jpg" alt="25"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/26.jpg" alt="26"></p>
+<p>重启mysql服务并登陆</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/27.jpg" alt="27"></p>
+<p>修改登录密码为123456，再次重启mysql服务，使用新密码登录</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/28.jpg" alt="28"></p>
+<p>授权远程连接，密码为root</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/29.jpg" alt="29"></p>
+<p>查看编码格式</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/30.jpg" alt="30"></p>
+<p>重点：需要修改编码格式为UTF-8，导入数据库sql的时候，请确保sql文件为utf8编码</p>
+<p>进入mysql命令行后 输入</p>
+<p>setnamesutf8;</p>
+<p>（测试数据库数据）</p>
+<p>再进入数据库 use test;</p>
+<p>在导入sql脚本 source test.sql;</p>
+<p>永久性开启3306端口，并重启防火墙（firewalld 防火墙（centos-7）运行命令,并重启）</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/31.jpg" alt="31"></p>
+<h2 id="SQLyog远程连接"><a href="#SQLyog远程连接" class="headerlink" title="SQLyog远程连接"></a>SQLyog远程连接</h2><p>在本地的SQLyog上远程连接CentOS_sly上的MySQL</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/32.jpg" alt="32"></p>
+<p>连接成功</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/33.jpg" alt="33"></p>
+<hr>
+<h1 id="WebLogic"><a href="#WebLogic" class="headerlink" title="WebLogic"></a>WebLogic</h1><h2 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h2><ol>
+<li>创建用户组及用户</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/34.jpg" alt="34"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/35.jpg" alt="35"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/36.jpg" alt="36"></p>
+<ol start="2">
+<li>创建目录</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/37.jpg" alt="37"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/38.jpg" alt="38"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/39.jpg" alt="39"></p>
+<ol start="3">
+<li>设置weblogic用户的密码为：weblogic</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/40.jpg" alt="40"></p>
+<ol start="4">
+<li>下载安装包</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/41.jpg" alt="41"></p>
+<ol start="5">
+<li>改变安装包的所属用户及用户组</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/42.jpg" alt="42"></p>
+<ol start="6">
+<li>复制到指定目录下</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/43.jpg" alt="43"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/44.jpg" alt="44"></p>
+<ol start="7">
+<li><h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2></li>
+</ol>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/YingYue/p/3840070.html">https://www.cnblogs.com/YingYue/p/3840070.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tiantiandjava/article/details/80481310">https://blog.csdn.net/tiantiandjava/article/details/80481310</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/github_38922197/article/details/75097320">https://blog.csdn.net/github_38922197/article/details/75097320</a>()</p>
+<ol>
+<li>切换到weblogic用户</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/45.jpg" alt="45"></p>
+<ol>
+<li>赋予权限</li>
+</ol>
+<p>安装过程中有可能因为权限读写问题导致的终止..索性直接开了权限给它</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/46.jpg" alt="46"></p>
+<ol>
+<li>在/home/weblogic/下创建一个文件：oraInst.loc</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/47.jpg" alt="47"></p>
+<ol>
+<li>在/home/weblogic/下再创建一个文件：wls.rsp</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/48.jpg" alt="48"></p>
+<ol>
+<li>编辑环境变量</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/49.jpg" alt="49"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/50.jpg" alt="50"></p>
+<ol>
+<li>安装</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/51.jpg" alt="51"></p>
+<p>报错</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/52.jpg" alt="52"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/53.jpg" alt="53"></p>
+<p>命令编辑时带上绝对路径，再次运行安装命令</p>
+<p>响应文件报错</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/54.jpg" alt="54"></p>
+<p>修改响应文件如下</p>
+<p>再次安装</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/55.jpg" alt="55"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/56.jpg" alt="56"></p>
+<p>安装成功</p>
+<ol>
+<li>测试安装</li>
+</ol>
+<p>创建一个域</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/57.jpg" alt="57"></p>
+<p>进入/home/weblogic/Oracle/Middleware/wlserver/common/bin目录，找到.config.sh文件</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/58.jpg" alt="58"></p>
+<p>执行weblogic服务域配置启动文件，启动文件初始化成功后，选择创建域类型，第一次创建使用默认类型:”创建一个新的服务域”。</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/59.jpg" alt="59"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/60.jpg" alt="60"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/61.jpg" alt="61"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/62.jpg" alt="62"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/63.jpg" alt="63"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/64.jpg" alt="64"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/65.jpg" alt="65"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/66.jpg" alt="66"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/67.jpg" alt="67"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/68.jpg" alt="68"></p>
+<p>启动服务</p>
+<p><img src="https://uploader.shimo.im/f/BwBX5cwvaL0njUHF.png!thumbnail" alt="图片"></p>
+<p>浏览器访问</p>
+<p><img src="https://uploader.shimo.im/f/lomoQTlu85gR5cfi.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/3D5OAP4kgncXzryB.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/Y0OppkSWHG4oVZ4r.png!thumbnail" alt="图片"></p>
+<p>停止服务<img src="https://uploader.shimo.im/f/Ztf2yNI7JIIkHNtq.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/qmdrVcGtL5oh1c7X.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><h2 id="参考资料-2"><a href="#参考资料-2" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wishwzp/p/7113410.html">https://www.cnblogs.com/wishwzp/p/7113410.html</a></p>
+<h2 id="环境预备"><a href="#环境预备" class="headerlink" title="环境预备"></a>环境预备</h2><p>首先安装JDK，再进行Tomcat的安装</p>
+<h2 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><p>下载安装包</p>
+<p><img src="https://uploader.shimo.im/f/2NOdQDbHZzU5abzq.png!thumbnail" alt="图片"></p>
+<p>做备份</p>
+<p><img src="https://uploader.shimo.im/f/J6Ezm3DHYUsx2d0Q.png!thumbnail" alt="图片"></p>
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>创建解压目录</p>
+<p><img src="https://uploader.shimo.im/f/uOOiTjUoU6I6itfo.png!thumbnail" alt="图片"></p>
+<p>将压缩包复制到解压目录下</p>
+<p><img src="https://uploader.shimo.im/f/OjkqNEQ0LVMs2aMP.png!thumbnail" alt="图片"></p>
+<p>解压</p>
+<p><img src="https://uploader.shimo.im/f/uNN3hRm7rQ0j2kJQ.png!thumbnail" alt="图片"></p>
+<p>删除压缩包</p>
+<p><img src="https://uploader.shimo.im/f/VyBT5AO5EJ0aB1ES.png!thumbnail" alt="图片"></p>
+<p>在配置文件/usr/tomcat/apache-tomcat-8.5.38/conf/server.xml中查看需要开启的端口8080</p>
+<p><img src="https://uploader.shimo.im/f/ksptriw30p0CQOYU.png!thumbnail" alt="图片"></p>
+<p>配置防火墙，开启8080端口</p>
+<p><img src="https://uploader.shimo.im/f/TJjMp4pUJrYcrFDI.png!thumbnail" alt="图片"></p>
+<h2 id="测试安装"><a href="#测试安装" class="headerlink" title="测试安装"></a>测试安装</h2><p>启动tomcat，测试是否安装成功</p>
+<p><img src="https://uploader.shimo.im/f/0pTdZoAytjUqL1wd.png!thumbnail" alt="图片"></p>
+<p>关闭tomcat</p>
+<p><img src="https://uploader.shimo.im/f/Q0AWX2vu8SIKKx9q.png!thumbnail" alt="图片"></p>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p><img src="https://uploader.shimo.im/f/01WD5D8P8BQcaqf9.png!thumbnail" alt="图片"></p>
+<h2 id="将tomcat添加为linux系统服务"><a href="#将tomcat添加为linux系统服务" class="headerlink" title="将tomcat添加为linux系统服务"></a>将tomcat添加为linux系统服务</h2><p>参考资料：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zfl589778/article/details/51333442">https://blog.csdn.net/zfl589778/article/details/51333442</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mnstar/p/8565758.html">https://www.cnblogs.com/mnstar/p/8565758.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaoyii/p/9054067.html">https://www.cnblogs.com/xiaoyii/p/9054067.html</a></p>
+<p><img src="https://uploader.shimo.im/f/SFbHL1wqKKI2cY6s.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/w96zAEXURDMkUQ8l.png!thumbnail" alt="图片"></p>
+<p>在其他目录下，检查是否成功</p>
+<p><img src="https://uploader.shimo.im/f/EWAlLJMnAAUaquB6.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="RAR-for-Linux"><a href="#RAR-for-Linux" class="headerlink" title="RAR for Linux"></a>RAR for Linux</h1><p>Linux下的以.rar结尾的压缩文件的解压工具。需自行安装。</p>
+<h2 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h2><p><img src="https://uploader.shimo.im/f/Z8ZyVhT81TU2m7HM.png!thumbnail" alt="图片"></p>
+<p>解压</p>
+<p><img src="https://uploader.shimo.im/f/4eBpsPt5cmQsZdrI.png!thumbnail" alt="图片"></p>
+<h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><p><img src="https://uploader.shimo.im/f/Jg9YwhU8ZfwXgdNS.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="MyEcplise"><a href="#MyEcplise" class="headerlink" title="MyEcplise"></a>MyEcplise</h1><h2 id="下载-3"><a href="#下载-3" class="headerlink" title="下载"></a>下载</h2><p><img src="https://uploader.shimo.im/f/m3VzER9S6LwhsOWv.png!thumbnail" alt="图片"></p>
+<h2 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h2><p>解压</p>
+<p><img src="https://uploader.shimo.im/f/nDMhQEIMNCUg7C9D.png!thumbnail" alt="图片"></p>
+<p>安装</p>
+<p><img src="https://uploader.shimo.im/f/c537EKRDUCUwObs2.png!thumbnail" alt="图片"></p>
+<p>赋权</p>
+<p><img src="https://uploader.shimo.im/f/I1zK1ftwAvYWtMGG.png!thumbnail" alt="图片"></p>
+<p>再次安装</p>
+<p><img src="https://uploader.shimo.im/f/TAXaees6q6UTpQoe.png!thumbnail" alt="图片"></p>
+<p>出现图形化界面引导安装</p>
+<p><img src="https://uploader.shimo.im/f/vWW7v2RMuGocnwPq.png!thumbnail" alt="图片"></p>
+<p>点击next等待安装</p>
+<p><img src="https://uploader.shimo.im/f/gzgEM0WFXsAt0w0i.png!thumbnail" alt="图片"></p>
+<p>勾选接受，然后next</p>
+<p><img src="https://uploader.shimo.im/f/xCuUlpBc6EgsdEF4.png!thumbnail" alt="图片"></p>
+<p>选择安装位置，然后next</p>
+<p><img src="https://uploader.shimo.im/f/tftu4JPeinYfDB5J.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/jCwEd0JPhyMvVMOM.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/ZFFfXomwXS0Y8AkU.png!thumbnail" alt="图片"></p>
+<p>创建快捷方式</p>
+<p><img src="https://uploader.shimo.im/f/dMg95P55XcsUxeKG.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/18mIsg4zzOk73d3h.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/yiEoIwu6SuE6MMu8.png!thumbnail" alt="图片"></p>
+<p>先不要启动，等破解成功以后再启动</p>
+<h2 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h2><p>解压破解文件</p>
+<p><img src="https://uploader.shimo.im/f/PXilnHJeKnwEWr8j.png!thumbnail" alt="图片"></p>
+<p>运行crack.jar</p>
+<p><img src="https://uploader.shimo.im/f/RrQFsoGARY8tAnoE.png!thumbnail" alt="图片"></p>
+<p>填入任意Usercode，依次点击</p>
+<p><img src="https://uploader.shimo.im/f/EKWJkvZJBokJx7MW.png!thumbnail" alt="图片"></p>
+<p>重新生成密钥文件</p>
+<p><img src="https://uploader.shimo.im/f/Xc708AekvbUcd8Rr.png!thumbnail" alt="图片"></p>
+<p>替换相关jar文件</p>
+<p><img src="https://uploader.shimo.im/f/gDIOMaF3JMw1GeCG.png!thumbnail" alt="图片"></p>
+<p>选择MyEclipse的插件目录</p>
+<p><img src="https://uploader.shimo.im/f/ql3sE5NPV0wW4tiK.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/h0KCqxijBVc3RJOT.png!thumbnail" alt="图片"></p>
+<p>保存配置</p>
+<p><img src="https://uploader.shimo.im/f/3fDAfDjKxQsCt3zK.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/TuV6HcqqBPUABDTA.png!thumbnail" alt="图片"></p>
+<p>破解成功，启动MyEclipse</p>
+<p><img src="https://uploader.shimo.im/f/XUPFV67sXSMw6fqe.png!thumbnail" alt="图片"></p>
+<p>启动MyEclipse，报错如下：</p>
+<p><img src="https://uploader.shimo.im/f/2h0D18RspH44zzD7.png!thumbnail" alt="图片"></p>
+<p>参考资料：</p>
+<p><a target="_blank" rel="noopener" href="https://zlr.iteye.com/blog/2204242">https://zlr.iteye.com/blog/2204242</a></p>
+<p>改动eclipse.ini文件</p>
+<p><img src="https://uploader.shimo.im/f/VtA357IPvNI3QSgK.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="WinScp"><a href="#WinScp" class="headerlink" title="WinScp"></a>WinScp</h1><p>通过WinScp连接虚拟机，在本地与远程计算机间安全的复制文件。.winscp也可以链接其他系统,比如linux系统</p>
+<h2 id="安装WinScp在Windows本地并连接"><a href="#安装WinScp在Windows本地并连接" class="headerlink" title="安装WinScp在Windows本地并连接"></a>安装WinScp在Windows本地并连接</h2><p><img src="https://uploader.shimo.im/f/3SytaNWI0xo9YCz1.png!thumbnail" alt="图片"></p>
+<p>连接失败，linux的22端口未开放</p>
+<h2 id="在CentOS7上开放端口22"><a href="#在CentOS7上开放端口22" class="headerlink" title="在CentOS7上开放端口22"></a>在CentOS7上开放端口22</h2><p><img src="https://uploader.shimo.im/f/LdDFfCN6biM521yR.png!thumbnail" alt="图片"></p>
+<p>命令含义：</p>
+<p>–zone#作用域</p>
+<p>–add-port=22/tcp#添加端口，格式为：端口/通讯协议</p>
+<p>–permanent#永久生效，没有此参数重启后失效</p>
+<p>重启防火墙</p>
+<p><img src="https://uploader.shimo.im/f/hq8cwIxlf3sOdQWz.png!thumbnail" alt="图片"></p>
+<p>查看所有端口的防火墙状态</p>
+<h2 id="再次连接"><a href="#再次连接" class="headerlink" title="再次连接"></a>再次连接</h2><p><img src="https://uploader.shimo.im/f/ARnM3idlJNUM45iC.png!thumbnail" alt="图片"></p>
+<p>连接成功</p>
+<p><img src="https://uploader.shimo.im/f/r2ayxz076h4PSui6.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="Eclipse"><a href="#Eclipse" class="headerlink" title="Eclipse"></a>Eclipse</h1><h2 id="下载-4"><a href="#下载-4" class="headerlink" title="下载"></a>下载</h2><h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><p><img src="https://uploader.shimo.im/f/o15ouXFSzR4j48bZ.png!thumbnail" alt="图片"></p>
+<h2 id="创建快捷方式"><a href="#创建快捷方式" class="headerlink" title="创建快捷方式"></a>创建快捷方式</h2><p><img src="https://uploader.shimo.im/f/RMTLNANlMx0PLOoM.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/S0E27hLKbYg0T8TD.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/pYej9VjWKSI7cC2I.png!thumbnail" alt="图片"></p>
+<p>启动</p>
+<p><img src="https://uploader.shimo.im/f/hR2f5O4Yx5UpbX6a.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="Resin"><a href="#Resin" class="headerlink" title="Resin"></a>Resin</h1><h2 id="JDK环境"><a href="#JDK环境" class="headerlink" title="JDK环境"></a>JDK环境</h2><h2 id="下载-5"><a href="#下载-5" class="headerlink" title="下载"></a>下载</h2><p><a target="_blank" rel="noopener" href="http://caucho.com/products/resin/download/gpl#download">http://caucho.com/products/resin/download/gpl#download</a></p>
+<h2 id="解压-1"><a href="#解压-1" class="headerlink" title="解压"></a>解压</h2><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><h2 id="make"><a href="#make" class="headerlink" title="make"></a>make</h2><h2 id="makeinstall"><a href="#makeinstall" class="headerlink" title="makeinstall"></a>makeinstall</h2><h2 id="启动resin"><a href="#启动resin" class="headerlink" title="启动resin"></a>启动resin</h2><p>./bin/resin.sh start</p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>在浏览器打开<a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a></p>
+<hr>
+<h1 id="Oracle"><a href="#Oracle" class="headerlink" title="Oracle"></a>Oracle</h1><h1 id="CentOS-7-彻底卸载MySQL"><a href="#CentOS-7-彻底卸载MySQL" class="headerlink" title="CentOS 7 彻底卸载MySQL"></a>CentOS 7 彻底卸载MySQL</h1><h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><h3 id="查看安装的mysql相关的包"><a href="#查看安装的mysql相关的包" class="headerlink" title="查看安装的mysql相关的包"></a>查看安装的mysql相关的包</h3><p><img src="https://uploader.shimo.im/f/2gNW0kg4De4Repry.png!thumbnail" alt="图片"></p>
+<h3 id="卸载mysql相关包"><a href="#卸载mysql相关包" class="headerlink" title="卸载mysql相关包"></a>卸载mysql相关包</h3><p><img src="https://uploader.shimo.im/f/pFgAXTmqkW8a6bnr.png!thumbnail" alt="图片"></p>
+<h3 id="再次查看"><a href="#再次查看" class="headerlink" title="再次查看"></a>再次查看</h3><p><img src="https://uploader.shimo.im/f/v8yLOBbqmb8Sy7Ke.png!thumbnail" alt="图片"></p>
+<h3 id="再次卸载"><a href="#再次卸载" class="headerlink" title="再次卸载"></a>再次卸载</h3><p><img src="https://uploader.shimo.im/f/ZzuQDXfkxYovt7Mj.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/ozawWbTzbbUD3CrS.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/2jA28aQhh4IHOL7b.png!thumbnail" alt="图片"></p>
+<h3 id="卸载配置文件"><a href="#卸载配置文件" class="headerlink" title="卸载配置文件"></a>卸载配置文件</h3><h3 id="查找相关目录"><a href="#查找相关目录" class="headerlink" title="查找相关目录"></a>查找相关目录</h3><p><img src="https://uploader.shimo.im/f/OUYzvJXhCsYONYft.png!thumbnail" alt="图片"></p>
+<h3 id="删除相关目录"><a href="#删除相关目录" class="headerlink" title="删除相关目录"></a>删除相关目录</h3><p><img src="https://uploader.shimo.im/f/l1yRBgYCZh47ejZn.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/7MOuXrHD5R81LEAy.png!thumbnail" alt="图片"></p>
+<h3 id="删除日志文件"><a href="#删除日志文件" class="headerlink" title="删除日志文件"></a>删除日志文件</h3><p><img src="https://uploader.shimo.im/f/68J3OyUmMvc89IwQ.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/QXKF359Inncc4rv1.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/KEdPmaZAxKs67iO5.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/NYPI86ToNQADudx4.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/UtIzXls3cP4LzGnv.png!thumbnail" alt="图片"></p>
+<h3 id="删除mysql用户及用户组"><a href="#删除mysql用户及用户组" class="headerlink" title="删除mysql用户及用户组"></a>删除mysql用户及用户组</h3><p><img src="https://uploader.shimo.im/f/S9618jvZOZEIsCzg.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/MgFGoE0WKuUlZzkb.png!thumbnail" alt="图片"></p>
+<h2 id="重新安装"><a href="#重新安装" class="headerlink" title="重新安装"></a>重新安装</h2><p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/luckycn/p/7289995.html">https://www.cnblogs.com/luckycn/p/7289995.html</a></p>
+<h3 id="重新创建mysql的用户组和用户"><a href="#重新创建mysql的用户组和用户" class="headerlink" title="重新创建mysql的用户组和用户"></a>重新创建mysql的用户组和用户</h3><p><img src="https://uploader.shimo.im/f/B5EBkOLAvjIlPGHr.png!thumbnail" alt="图片"></p>
+<h3 id="更改mysql用户的密码为sly-root"><a href="#更改mysql用户的密码为sly-root" class="headerlink" title="更改mysql用户的密码为sly!root"></a>更改mysql用户的密码为sly!root</h3><p><img src="https://uploader.shimo.im/f/S632GRyePCAFd8F7.png!thumbnail" alt="图片"></p>
+<h3 id="修改安装文件的所属用户及用户组"><a href="#修改安装文件的所属用户及用户组" class="headerlink" title="修改安装文件的所属用户及用户组"></a>修改安装文件的所属用户及用户组</h3><p><img src="https://uploader.shimo.im/f/n0Sm781pm3ohRXLx.png!thumbnail" alt="图片"></p>
+<h3 id="下载yum-repo源"><a href="#下载yum-repo源" class="headerlink" title="下载yum repo源"></a>下载yum repo源</h3><p><img src="https://uploader.shimo.im/f/h6j9E0HdbKYaQwOf.png!thumbnail" alt="图片"></p>
+<h3 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h3><p><img src="https://uploader.shimo.im/f/W0mhmkk9qCwnxmAQ.png!thumbnail" alt="图片"></p>
+<h3 id="安装yum-repo源"><a href="#安装yum-repo源" class="headerlink" title="安装yum repo源"></a>安装yum repo源</h3><p><img src="https://uploader.shimo.im/f/jt71RMhySHQBUyAo.png!thumbnail" alt="图片"></p>
+<h3 id="添加mysql用户为sudoer"><a href="#添加mysql用户为sudoer" class="headerlink" title="添加mysql用户为sudoer"></a>添加mysql用户为sudoer</h3><p><img src="https://uploader.shimo.im/f/PfYl49qM3ZQzZDmE.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/UNTDoZmnNwwC9KDA.png!thumbnail" alt="图片"></p>
+<h3 id="添加内容如下"><a href="#添加内容如下" class="headerlink" title="添加内容如下"></a>添加内容如下</h3><p><img src="https://uploader.shimo.im/f/CTH2gXH0XUIX0Fnb.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/TYuIxIBHvvQafeS1.png!thumbnail" alt="图片"></p>
+<h3 id="再次安装repo源"><a href="#再次安装repo源" class="headerlink" title="再次安装repo源"></a>再次安装repo源</h3><p><img src="https://uploader.shimo.im/f/WXlutNlPOjstBHQh.png!thumbnail" alt="图片"></p>
+<h3 id="在-etc-yum-repos-d-生成以下文件"><a href="#在-etc-yum-repos-d-生成以下文件" class="headerlink" title="在/etc/yum.repos.d/生成以下文件"></a>在/etc/yum.repos.d/生成以下文件</h3><p><img src="https://uploader.shimo.im/f/Umc2cnyC28cpDwg3.png!thumbnail" alt="图片"></p>
+<h3 id="安装mysql-1"><a href="#安装mysql-1" class="headerlink" title="安装mysql"></a>安装mysql</h3><p><img src="https://uploader.shimo.im/f/DxNx0nrrvzYoDtbI.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/37lC1IuZFeAUWATr.png!thumbnail" alt="图片"></p>
+<h3 id="启动mysql服务"><a href="#启动mysql服务" class="headerlink" title="启动mysql服务"></a>启动mysql服务</h3><p><img src="https://uploader.shimo.im/f/oC6RQq80iUoIZHl1.png!thumbnail" alt="图片"></p>
+<h3 id="找到临时密码"><a href="#找到临时密码" class="headerlink" title="找到临时密码"></a>找到临时密码</h3><p><img src="https://uploader.shimo.im/f/6H1ZAt0yd2wZxyYz.png!thumbnail" alt="图片"></p>
+<p>登录mysql</p>
+<p><img src="https://uploader.shimo.im/f/BMYdzSZjIAIpyuNt.png!thumbnail" alt="图片"></p>
+<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><p><img src="https://uploader.shimo.im/f/qs0v6kqHZo0wRdLY.png!thumbnail" alt="图片"></p>
+<p>mysql配置文件</p>
+<p><img src="https://uploader.shimo.im/f/0dhOYmGQH10HMG1r.png!thumbnail" alt="图片"></p>
+<p>创建数据存放目录</p>
+<p><img src="https://uploader.shimo.im/f/oDUD0twF56snGp7n.png!thumbnail" alt="图片"></p>
+<p>安装libaio依赖库</p>
+<p><img src="https://uploader.shimo.im/f/UJEaC4f0O5YlsRlr.png!thumbnail" alt="图片"></p>
+<p>初始化mysql</p>
+<p><img src="https://uploader.shimo.im/f/2EzJ7FFRHcIIsIa4.png!thumbnail" alt="图片"></p>
+<p>启动mysql</p>
+<p><img src="https://uploader.shimo.im/f/xy6FftpDuSQXQpEf.png!thumbnail" alt="图片"></p>
+<p>创建mysql日志文件</p>
+<p><img src="https://uploader.shimo.im/f/R9pkXAT84fokPGmO.png!thumbnail" alt="图片"></p>
+<p>查看mysql初始密码</p>
+<p><img src="https://uploader.shimo.im/f/43LpT6jkJRAa0X8z.png!thumbnail" alt="图片"></p>
+<p>使用初始密码登录mysql</p>
+<p><img src="https://uploader.shimo.im/f/p6IyY7Pl7ggszdF8.png!thumbnail" alt="图片"></p>
+<p>设置mysql的root用户的密码为123456</p>
+<p><img src="https://uploader.shimo.im/f/tlk5haU6UOIr21Na.png!thumbnail" alt="图片"></p>
+<p>授权远程连接</p>
+<p><img src="https://uploader.shimo.im/f/WzDuORQiYwE4TJY5.png!thumbnail" alt="图片"></p>
+<p>设置mysql启动命令的链接</p>
+<p><img src="https://uploader.shimo.im/f/c4VM4i629nIetn8y.png!thumbnail" alt="图片"></p>
+<p>测试登录</p>
+<p><img src="https://uploader.shimo.im/f/IeEa2JCy1pwnyMOr.png!thumbnail" alt="图片"></p>
+<p>将mysqld服务加入开机自启动项</p>
+<p>将support-files/mysql.server服务脚本复制到/etc/init.d/，并重命名为mysqld</p>
+<p><img src="https://uploader.shimo.im/f/EAc8SnHqqGIm4QVz.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/NMQSZvoz8CAsmpQS.png!thumbnail" alt="图片"></p>
+<p>通过chkconfig命令将mysqld服务加入到自启动服务项中</p>
+<p><img src="https://uploader.shimo.im/f/kn7V65Dnrj00ww4T.png!thumbnail" alt="图片"></p>
+<p>查看是否添加成功</p>
+<p><img src="https://uploader.shimo.im/f/M87gTZqh2DYjkgpN.png!thumbnail" alt="图片"></p>
+<p>重启系统，检查mysql服务是否启动</p>
+<p><img src="https://uploader.shimo.im/f/XfCQ1QJ90jQuPTqJ.png!thumbnail" alt="图片"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    jaeloree
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/" title="CentOS下各种环境及软件的安装1">http://example.com/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/11/11/SuJu-10th-Anniversary/" rel="next" title="SuJu-10th-Anniversary">
+                <i class="fa fa-chevron-left"></i> SuJu-10th-Anniversary
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jaeloree" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="jaeloree@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/5667238614" target="_blank" title="weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                好吃安利
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://baidu.com/" title="test1" target="_blank">test1</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://weibo.com/" title="test2" target="_blank">test2</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://douban.com/" title="test3" target="_blank">test3</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java"><span class="nav-number">1.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">1.1.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E6%9F%A5%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.</span> <span class="nav-text">自查系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.5.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="nav-number">1.6.</span> <span class="nav-text">检查是否成功</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL"><span class="nav-number">2.</span> <span class="nav-text">MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99-1"><span class="nav-number">2.1.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql%E7%9A%84repo%E6%BA%90"><span class="nav-number">2.2.</span> <span class="nav-text">mysql的repo源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85mysql"><span class="nav-number">2.3.</span> <span class="nav-text">安装mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLyog%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="nav-number">2.4.</span> <span class="nav-text">SQLyog远程连接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WebLogic"><span class="nav-number">3.</span> <span class="nav-text">WebLogic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%87%86%E5%A4%87"><span class="nav-number">3.1.</span> <span class="nav-text">安装准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.2.</span> <span class="nav-text">安装步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tomcat"><span class="nav-number">4.</span> <span class="nav-text">Tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99-2"><span class="nav-number">4.1.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%A2%84%E5%A4%87"><span class="nav-number">4.2.</span> <span class="nav-text">环境预备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-1"><span class="nav-number">4.3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-number">4.4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85"><span class="nav-number">4.5.</span> <span class="nav-text">测试安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-number">4.6.</span> <span class="nav-text">配置环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86tomcat%E6%B7%BB%E5%8A%A0%E4%B8%BAlinux%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1"><span class="nav-number">4.7.</span> <span class="nav-text">将tomcat添加为linux系统服务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RAR-for-Linux"><span class="nav-number">5.</span> <span class="nav-text">RAR for Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-2"><span class="nav-number">5.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-2"><span class="nav-number">5.2.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MyEcplise"><span class="nav-number">6.</span> <span class="nav-text">MyEcplise</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-3"><span class="nav-number">6.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-3"><span class="nav-number">6.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%B4%E8%A7%A3"><span class="nav-number">6.3.</span> <span class="nav-text">破解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WinScp"><span class="nav-number">7.</span> <span class="nav-text">WinScp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85WinScp%E5%9C%A8Windows%E6%9C%AC%E5%9C%B0%E5%B9%B6%E8%BF%9E%E6%8E%A5"><span class="nav-number">7.1.</span> <span class="nav-text">安装WinScp在Windows本地并连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8CentOS7%E4%B8%8A%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A322"><span class="nav-number">7.2.</span> <span class="nav-text">在CentOS7上开放端口22</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%8D%E6%AC%A1%E8%BF%9E%E6%8E%A5"><span class="nav-number">7.3.</span> <span class="nav-text">再次连接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Eclipse"><span class="nav-number">8.</span> <span class="nav-text">Eclipse</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-4"><span class="nav-number">8.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B"><span class="nav-number">8.2.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-number">8.3.</span> <span class="nav-text">创建快捷方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Resin"><span class="nav-number">9.</span> <span class="nav-text">Resin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK%E7%8E%AF%E5%A2%83"><span class="nav-number">9.1.</span> <span class="nav-text">JDK环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-5"><span class="nav-number">9.2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B-1"><span class="nav-number">9.3.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">9.4.</span> <span class="nav-text">修改配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#make"><span class="nav-number">9.5.</span> <span class="nav-text">make</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#makeinstall"><span class="nav-number">9.6.</span> <span class="nav-text">makeinstall</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8resin"><span class="nav-number">9.7.</span> <span class="nav-text">启动resin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81"><span class="nav-number">9.8.</span> <span class="nav-text">验证</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle"><span class="nav-number">10.</span> <span class="nav-text">Oracle</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CentOS-7-%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDMySQL"><span class="nav-number">11.</span> <span class="nav-text">CentOS 7 彻底卸载MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD"><span class="nav-number">11.1.</span> <span class="nav-text">卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E7%9A%84mysql%E7%9B%B8%E5%85%B3%E7%9A%84%E5%8C%85"><span class="nav-number">11.1.1.</span> <span class="nav-text">查看安装的mysql相关的包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BDmysql%E7%9B%B8%E5%85%B3%E5%8C%85"><span class="nav-number">11.1.2.</span> <span class="nav-text">卸载mysql相关包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%8D%E6%AC%A1%E6%9F%A5%E7%9C%8B"><span class="nav-number">11.1.3.</span> <span class="nav-text">再次查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%8D%E6%AC%A1%E5%8D%B8%E8%BD%BD"><span class="nav-number">11.1.4.</span> <span class="nav-text">再次卸载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">11.1.5.</span> <span class="nav-text">卸载配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E7%9B%B8%E5%85%B3%E7%9B%AE%E5%BD%95"><span class="nav-number">11.1.6.</span> <span class="nav-text">查找相关目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%9B%B8%E5%85%B3%E7%9B%AE%E5%BD%95"><span class="nav-number">11.1.7.</span> <span class="nav-text">删除相关目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6"><span class="nav-number">11.1.8.</span> <span class="nav-text">删除日志文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4mysql%E7%94%A8%E6%88%B7%E5%8F%8A%E7%94%A8%E6%88%B7%E7%BB%84"><span class="nav-number">11.1.9.</span> <span class="nav-text">删除mysql用户及用户组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%85"><span class="nav-number">11.2.</span> <span class="nav-text">重新安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E5%88%9B%E5%BB%BAmysql%E7%9A%84%E7%94%A8%E6%88%B7%E7%BB%84%E5%92%8C%E7%94%A8%E6%88%B7"><span class="nav-number">11.2.1.</span> <span class="nav-text">重新创建mysql的用户组和用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9mysql%E7%94%A8%E6%88%B7%E7%9A%84%E5%AF%86%E7%A0%81%E4%B8%BAsly-root"><span class="nav-number">11.2.2.</span> <span class="nav-text">更改mysql用户的密码为sly!root</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%80%E5%B1%9E%E7%94%A8%E6%88%B7%E5%8F%8A%E7%94%A8%E6%88%B7%E7%BB%84"><span class="nav-number">11.2.3.</span> <span class="nav-text">修改安装文件的所属用户及用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDyum-repo%E6%BA%90"><span class="nav-number">11.2.4.</span> <span class="nav-text">下载yum repo源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="nav-number">11.2.5.</span> <span class="nav-text">修改权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85yum-repo%E6%BA%90"><span class="nav-number">11.2.6.</span> <span class="nav-text">安装yum repo源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0mysql%E7%94%A8%E6%88%B7%E4%B8%BAsudoer"><span class="nav-number">11.2.7.</span> <span class="nav-text">添加mysql用户为sudoer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%86%85%E5%AE%B9%E5%A6%82%E4%B8%8B"><span class="nav-number">11.2.8.</span> <span class="nav-text">添加内容如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%8D%E6%AC%A1%E5%AE%89%E8%A3%85repo%E6%BA%90"><span class="nav-number">11.2.9.</span> <span class="nav-text">再次安装repo源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-etc-yum-repos-d-%E7%94%9F%E6%88%90%E4%BB%A5%E4%B8%8B%E6%96%87%E4%BB%B6"><span class="nav-number">11.2.10.</span> <span class="nav-text">在&#x2F;etc&#x2F;yum.repos.d&#x2F;生成以下文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85mysql-1"><span class="nav-number">11.2.11.</span> <span class="nav-text">安装mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8mysql%E6%9C%8D%E5%8A%A1"><span class="nav-number">11.2.12.</span> <span class="nav-text">启动mysql服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%BE%E5%88%B0%E4%B8%B4%E6%97%B6%E5%AF%86%E7%A0%81"><span class="nav-number">11.2.13.</span> <span class="nav-text">找到临时密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81"><span class="nav-number">11.2.14.</span> <span class="nav-text">修改密码</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jaeloree</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'VgPX949OzKUQrNQadBvnOHQ1-gzGzoHsz',
+        appKey: 'Ru8QNiaByK1GlbfGDSiSgv5t',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

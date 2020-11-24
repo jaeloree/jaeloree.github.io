@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>test1</title>
+    <url>/2020/11/09/test1/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SuJu-10th-Anniversary</title>
+    <url>/2020/11/11/SuJu-10th-Anniversary/</url>
+    <content><![CDATA[<h1 id="this-is-a-firsttitle"><a href="#this-is-a-firsttitle" class="headerlink" title="this is a firsttitle"></a>this is a firsttitle</h1><h2 id="this-is-a-subtitle"><a href="#this-is-a-subtitle" class="headerlink" title="this is a subtitle"></a>this is a subtitle</h2><a id="more"></a>
+
+<p><em>斜体</em></p>
+<p><strong>粗体</strong></p>
+<p>分隔线：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p><strong><em>粗斜体</em></strong></p>
+<p><del>删除线</del></p>
+]]></content>
+      <categories>
+        <category>追星</category>
+      </categories>
+      <tags>
+        <tag>suju</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS下各种环境及软件的安装1</title>
+    <url>/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.cnblogs.com/sxdcgaq8080/p/7492426.html">https://www.cnblogs.com/sxdcgaq8080/p/7492426.html</a></p>
+<h2 id="自查系统"><a href="#自查系统" class="headerlink" title="自查系统"></a>自查系统</h2><p>首先查看系统是否自带JDK</p>
+<a id="more"></a>
+
+<p><a href="1.jpg">1</a></p>
+<!-- <img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/1.jpg" class="" title="this is a test"> -->
+
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/2.jpg" alt="2"></p>
+<p>卸载系统自带的OpenJDK以及相关的java文件</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/3.jpg" alt="3"></p>
+<p>完整的删除文件的命令，在命令窗口键入：</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/4.jpg" alt="4"></p>
+<p>注意：noarch文件可以不用删除</p>
+<p>检查是否删除成功</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/5.jpg" alt="5"></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载系统适合的JDK</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/6.jpg" alt="6"></p>
+<p>将安装包做个备份</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/7.jpg" alt="7"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/8.jpg" alt="8"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/9.jpg" alt="9"></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>创建解压目录，将安装包复制到此目录下</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/10.jpg" alt="10"></p>
+<p>解压</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/11.jpg" alt="11"></p>
+<p>删除压缩包</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/12.jpg" alt="12"></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/13.jpg" alt="13"></p>
+<p>在文本的最后一行粘贴如下：</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/14.jpg" alt="14"></p>
+<p>让刚刚设置的环境变量生效</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/15.jpg" alt="15"></p>
+<h2 id="检查是否成功"><a href="#检查是否成功" class="headerlink" title="检查是否成功"></a>检查是否成功</h2><p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/16.jpg" alt="16"></p>
+<hr>
+<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="参考资料-1"><a href="#参考资料-1" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/a774630093/article/details/79270080">https://blog.csdn.net/a774630093/article/details/79270080</a></p>
+<p><a href="https://www.cnblogs.com/moxiaoan/p/5683743.html">https://www.cnblogs.com/moxiaoan/p/5683743.html</a></p>
+<p><a href="https://blog.csdn.net/weiyangdong/article/details/79540217">https://blog.csdn.net/weiyangdong/article/details/79540217</a></p>
+<p><a href="https://blog.csdn.net/zwldx/article/details/81609120">https://blog.csdn.net/zwldx/article/details/81609120</a></p>
+<h2 id="mysql的repo源"><a href="#mysql的repo源" class="headerlink" title="mysql的repo源"></a>mysql的repo源</h2><p>获取repo源</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/17.jpg" alt="17"></p>
+<p>安装repo源</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/18.jpg" alt="18"></p>
+<p>查看</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/19.jpg" alt="19"></p>
+<h2 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h2><p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/20.jpg" alt="20"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/21.jpg" alt="21"></p>
+<p>再次查看</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/22.jpg" alt="22"></p>
+<p>登录</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/23.jpg" alt="23"></p>
+<p>改变、var/lib/mysql的所属用户</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/24.jpg" alt="24"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/25.jpg" alt="25"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/26.jpg" alt="26"></p>
+<p>重启mysql服务并登陆</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/27.jpg" alt="27"></p>
+<p>修改登录密码为123456，再次重启mysql服务，使用新密码登录</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/28.jpg" alt="28"></p>
+<p>授权远程连接，密码为root</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/29.jpg" alt="29"></p>
+<p>查看编码格式</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/30.jpg" alt="30"></p>
+<p>重点：需要修改编码格式为UTF-8，导入数据库sql的时候，请确保sql文件为utf8编码</p>
+<p>进入mysql命令行后 输入</p>
+<p>setnamesutf8;</p>
+<p>（测试数据库数据）</p>
+<p>再进入数据库 use test;</p>
+<p>在导入sql脚本 source test.sql;</p>
+<p>永久性开启3306端口，并重启防火墙（firewalld 防火墙（centos-7）运行命令,并重启）</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/31.jpg" alt="31"></p>
+<h2 id="SQLyog远程连接"><a href="#SQLyog远程连接" class="headerlink" title="SQLyog远程连接"></a>SQLyog远程连接</h2><p>在本地的SQLyog上远程连接CentOS_sly上的MySQL</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/32.jpg" alt="32"></p>
+<p>连接成功</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/33.jpg" alt="33"></p>
+<hr>
+<h1 id="WebLogic"><a href="#WebLogic" class="headerlink" title="WebLogic"></a>WebLogic</h1><h2 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h2><ol>
+<li>创建用户组及用户</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/34.jpg" alt="34"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/35.jpg" alt="35"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/36.jpg" alt="36"></p>
+<ol start="2">
+<li>创建目录</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/37.jpg" alt="37"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/38.jpg" alt="38"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/39.jpg" alt="39"></p>
+<ol start="3">
+<li>设置weblogic用户的密码为：weblogic</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/40.jpg" alt="40"></p>
+<ol start="4">
+<li>下载安装包</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/41.jpg" alt="41"></p>
+<ol start="5">
+<li>改变安装包的所属用户及用户组</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/42.jpg" alt="42"></p>
+<ol start="6">
+<li>复制到指定目录下</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/43.jpg" alt="43"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/44.jpg" alt="44"></p>
+<ol start="7">
+<li><h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2></li>
+</ol>
+<p>参考资料</p>
+<p><a href="https://www.cnblogs.com/YingYue/p/3840070.html">https://www.cnblogs.com/YingYue/p/3840070.html</a></p>
+<p><a href="https://blog.csdn.net/tiantiandjava/article/details/80481310">https://blog.csdn.net/tiantiandjava/article/details/80481310</a></p>
+<p><a href="https://blog.csdn.net/github_38922197/article/details/75097320">https://blog.csdn.net/github_38922197/article/details/75097320</a>()</p>
+<ol>
+<li>切换到weblogic用户</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/45.jpg" alt="45"></p>
+<ol>
+<li>赋予权限</li>
+</ol>
+<p>安装过程中有可能因为权限读写问题导致的终止..索性直接开了权限给它</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/46.jpg" alt="46"></p>
+<ol>
+<li>在/home/weblogic/下创建一个文件：oraInst.loc</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/47.jpg" alt="47"></p>
+<ol>
+<li>在/home/weblogic/下再创建一个文件：wls.rsp</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/48.jpg" alt="48"></p>
+<ol>
+<li>编辑环境变量</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/49.jpg" alt="49"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/50.jpg" alt="50"></p>
+<ol>
+<li>安装</li>
+</ol>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/51.jpg" alt="51"></p>
+<p>报错</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/52.jpg" alt="52"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/53.jpg" alt="53"></p>
+<p>命令编辑时带上绝对路径，再次运行安装命令</p>
+<p>响应文件报错</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/54.jpg" alt="54"></p>
+<p>修改响应文件如下</p>
+<p>再次安装</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/55.jpg" alt="55"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/56.jpg" alt="56"></p>
+<p>安装成功</p>
+<ol>
+<li>测试安装</li>
+</ol>
+<p>创建一个域</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/57.jpg" alt="57"></p>
+<p>进入/home/weblogic/Oracle/Middleware/wlserver/common/bin目录，找到.config.sh文件</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/58.jpg" alt="58"></p>
+<p>执行weblogic服务域配置启动文件，启动文件初始化成功后，选择创建域类型，第一次创建使用默认类型:”创建一个新的服务域”。</p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/59.jpg" alt="59"></p>
+<p><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/60.jpg" alt="60"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/61.jpg" alt="61"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/62.jpg" alt="62"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/63.jpg" alt="63"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/64.jpg" alt="64"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/65.jpg" alt="65"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/66.jpg" alt="66"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/67.jpg" alt="67"><br><img src="/2020/11/24/CentOS%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85/68.jpg" alt="68"></p>
+<p>启动服务</p>
+<p><img src="https://uploader.shimo.im/f/BwBX5cwvaL0njUHF.png!thumbnail" alt="图片"></p>
+<p>浏览器访问</p>
+<p><img src="https://uploader.shimo.im/f/lomoQTlu85gR5cfi.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/3D5OAP4kgncXzryB.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/Y0OppkSWHG4oVZ4r.png!thumbnail" alt="图片"></p>
+<p>停止服务<img src="https://uploader.shimo.im/f/Ztf2yNI7JIIkHNtq.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/qmdrVcGtL5oh1c7X.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><h2 id="参考资料-2"><a href="#参考资料-2" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.cnblogs.com/wishwzp/p/7113410.html">https://www.cnblogs.com/wishwzp/p/7113410.html</a></p>
+<h2 id="环境预备"><a href="#环境预备" class="headerlink" title="环境预备"></a>环境预备</h2><p>首先安装JDK，再进行Tomcat的安装</p>
+<h2 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h2><p>下载安装包</p>
+<p><img src="https://uploader.shimo.im/f/2NOdQDbHZzU5abzq.png!thumbnail" alt="图片"></p>
+<p>做备份</p>
+<p><img src="https://uploader.shimo.im/f/J6Ezm3DHYUsx2d0Q.png!thumbnail" alt="图片"></p>
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>创建解压目录</p>
+<p><img src="https://uploader.shimo.im/f/uOOiTjUoU6I6itfo.png!thumbnail" alt="图片"></p>
+<p>将压缩包复制到解压目录下</p>
+<p><img src="https://uploader.shimo.im/f/OjkqNEQ0LVMs2aMP.png!thumbnail" alt="图片"></p>
+<p>解压</p>
+<p><img src="https://uploader.shimo.im/f/uNN3hRm7rQ0j2kJQ.png!thumbnail" alt="图片"></p>
+<p>删除压缩包</p>
+<p><img src="https://uploader.shimo.im/f/VyBT5AO5EJ0aB1ES.png!thumbnail" alt="图片"></p>
+<p>在配置文件/usr/tomcat/apache-tomcat-8.5.38/conf/server.xml中查看需要开启的端口8080</p>
+<p><img src="https://uploader.shimo.im/f/ksptriw30p0CQOYU.png!thumbnail" alt="图片"></p>
+<p>配置防火墙，开启8080端口</p>
+<p><img src="https://uploader.shimo.im/f/TJjMp4pUJrYcrFDI.png!thumbnail" alt="图片"></p>
+<h2 id="测试安装"><a href="#测试安装" class="headerlink" title="测试安装"></a>测试安装</h2><p>启动tomcat，测试是否安装成功</p>
+<p><img src="https://uploader.shimo.im/f/0pTdZoAytjUqL1wd.png!thumbnail" alt="图片"></p>
+<p>关闭tomcat</p>
+<p><img src="https://uploader.shimo.im/f/Q0AWX2vu8SIKKx9q.png!thumbnail" alt="图片"></p>
+<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p><img src="https://uploader.shimo.im/f/01WD5D8P8BQcaqf9.png!thumbnail" alt="图片"></p>
+<h2 id="将tomcat添加为linux系统服务"><a href="#将tomcat添加为linux系统服务" class="headerlink" title="将tomcat添加为linux系统服务"></a>将tomcat添加为linux系统服务</h2><p>参考资料：</p>
+<p><a href="https://blog.csdn.net/zfl589778/article/details/51333442">https://blog.csdn.net/zfl589778/article/details/51333442</a></p>
+<p><a href="https://www.cnblogs.com/mnstar/p/8565758.html">https://www.cnblogs.com/mnstar/p/8565758.html</a></p>
+<p><a href="https://www.cnblogs.com/xiaoyii/p/9054067.html">https://www.cnblogs.com/xiaoyii/p/9054067.html</a></p>
+<p><img src="https://uploader.shimo.im/f/SFbHL1wqKKI2cY6s.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/w96zAEXURDMkUQ8l.png!thumbnail" alt="图片"></p>
+<p>在其他目录下，检查是否成功</p>
+<p><img src="https://uploader.shimo.im/f/EWAlLJMnAAUaquB6.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="RAR-for-Linux"><a href="#RAR-for-Linux" class="headerlink" title="RAR for Linux"></a>RAR for Linux</h1><p>Linux下的以.rar结尾的压缩文件的解压工具。需自行安装。</p>
+<h2 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h2><p><img src="https://uploader.shimo.im/f/Z8ZyVhT81TU2m7HM.png!thumbnail" alt="图片"></p>
+<p>解压</p>
+<p><img src="https://uploader.shimo.im/f/4eBpsPt5cmQsZdrI.png!thumbnail" alt="图片"></p>
+<h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><p><img src="https://uploader.shimo.im/f/Jg9YwhU8ZfwXgdNS.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="MyEcplise"><a href="#MyEcplise" class="headerlink" title="MyEcplise"></a>MyEcplise</h1><h2 id="下载-3"><a href="#下载-3" class="headerlink" title="下载"></a>下载</h2><p><img src="https://uploader.shimo.im/f/m3VzER9S6LwhsOWv.png!thumbnail" alt="图片"></p>
+<h2 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h2><p>解压</p>
+<p><img src="https://uploader.shimo.im/f/nDMhQEIMNCUg7C9D.png!thumbnail" alt="图片"></p>
+<p>安装</p>
+<p><img src="https://uploader.shimo.im/f/c537EKRDUCUwObs2.png!thumbnail" alt="图片"></p>
+<p>赋权</p>
+<p><img src="https://uploader.shimo.im/f/I1zK1ftwAvYWtMGG.png!thumbnail" alt="图片"></p>
+<p>再次安装</p>
+<p><img src="https://uploader.shimo.im/f/TAXaees6q6UTpQoe.png!thumbnail" alt="图片"></p>
+<p>出现图形化界面引导安装</p>
+<p><img src="https://uploader.shimo.im/f/vWW7v2RMuGocnwPq.png!thumbnail" alt="图片"></p>
+<p>点击next等待安装</p>
+<p><img src="https://uploader.shimo.im/f/gzgEM0WFXsAt0w0i.png!thumbnail" alt="图片"></p>
+<p>勾选接受，然后next</p>
+<p><img src="https://uploader.shimo.im/f/xCuUlpBc6EgsdEF4.png!thumbnail" alt="图片"></p>
+<p>选择安装位置，然后next</p>
+<p><img src="https://uploader.shimo.im/f/tftu4JPeinYfDB5J.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/jCwEd0JPhyMvVMOM.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/ZFFfXomwXS0Y8AkU.png!thumbnail" alt="图片"></p>
+<p>创建快捷方式</p>
+<p><img src="https://uploader.shimo.im/f/dMg95P55XcsUxeKG.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/18mIsg4zzOk73d3h.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/yiEoIwu6SuE6MMu8.png!thumbnail" alt="图片"></p>
+<p>先不要启动，等破解成功以后再启动</p>
+<h2 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h2><p>解压破解文件</p>
+<p><img src="https://uploader.shimo.im/f/PXilnHJeKnwEWr8j.png!thumbnail" alt="图片"></p>
+<p>运行crack.jar</p>
+<p><img src="https://uploader.shimo.im/f/RrQFsoGARY8tAnoE.png!thumbnail" alt="图片"></p>
+<p>填入任意Usercode，依次点击</p>
+<p><img src="https://uploader.shimo.im/f/EKWJkvZJBokJx7MW.png!thumbnail" alt="图片"></p>
+<p>重新生成密钥文件</p>
+<p><img src="https://uploader.shimo.im/f/Xc708AekvbUcd8Rr.png!thumbnail" alt="图片"></p>
+<p>替换相关jar文件</p>
+<p><img src="https://uploader.shimo.im/f/gDIOMaF3JMw1GeCG.png!thumbnail" alt="图片"></p>
+<p>选择MyEclipse的插件目录</p>
+<p><img src="https://uploader.shimo.im/f/ql3sE5NPV0wW4tiK.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/h0KCqxijBVc3RJOT.png!thumbnail" alt="图片"></p>
+<p>保存配置</p>
+<p><img src="https://uploader.shimo.im/f/3fDAfDjKxQsCt3zK.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/TuV6HcqqBPUABDTA.png!thumbnail" alt="图片"></p>
+<p>破解成功，启动MyEclipse</p>
+<p><img src="https://uploader.shimo.im/f/XUPFV67sXSMw6fqe.png!thumbnail" alt="图片"></p>
+<p>启动MyEclipse，报错如下：</p>
+<p><img src="https://uploader.shimo.im/f/2h0D18RspH44zzD7.png!thumbnail" alt="图片"></p>
+<p>参考资料：</p>
+<p><a href="https://zlr.iteye.com/blog/2204242">https://zlr.iteye.com/blog/2204242</a></p>
+<p>改动eclipse.ini文件</p>
+<p><img src="https://uploader.shimo.im/f/VtA357IPvNI3QSgK.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="WinScp"><a href="#WinScp" class="headerlink" title="WinScp"></a>WinScp</h1><p>通过WinScp连接虚拟机，在本地与远程计算机间安全的复制文件。.winscp也可以链接其他系统,比如linux系统</p>
+<h2 id="安装WinScp在Windows本地并连接"><a href="#安装WinScp在Windows本地并连接" class="headerlink" title="安装WinScp在Windows本地并连接"></a>安装WinScp在Windows本地并连接</h2><p><img src="https://uploader.shimo.im/f/3SytaNWI0xo9YCz1.png!thumbnail" alt="图片"></p>
+<p>连接失败，linux的22端口未开放</p>
+<h2 id="在CentOS7上开放端口22"><a href="#在CentOS7上开放端口22" class="headerlink" title="在CentOS7上开放端口22"></a>在CentOS7上开放端口22</h2><p><img src="https://uploader.shimo.im/f/LdDFfCN6biM521yR.png!thumbnail" alt="图片"></p>
+<p>命令含义：</p>
+<p>–zone#作用域</p>
+<p>–add-port=22/tcp#添加端口，格式为：端口/通讯协议</p>
+<p>–permanent#永久生效，没有此参数重启后失效</p>
+<p>重启防火墙</p>
+<p><img src="https://uploader.shimo.im/f/hq8cwIxlf3sOdQWz.png!thumbnail" alt="图片"></p>
+<p>查看所有端口的防火墙状态</p>
+<h2 id="再次连接"><a href="#再次连接" class="headerlink" title="再次连接"></a>再次连接</h2><p><img src="https://uploader.shimo.im/f/ARnM3idlJNUM45iC.png!thumbnail" alt="图片"></p>
+<p>连接成功</p>
+<p><img src="https://uploader.shimo.im/f/r2ayxz076h4PSui6.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="Eclipse"><a href="#Eclipse" class="headerlink" title="Eclipse"></a>Eclipse</h1><h2 id="下载-4"><a href="#下载-4" class="headerlink" title="下载"></a>下载</h2><h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><p><img src="https://uploader.shimo.im/f/o15ouXFSzR4j48bZ.png!thumbnail" alt="图片"></p>
+<h2 id="创建快捷方式"><a href="#创建快捷方式" class="headerlink" title="创建快捷方式"></a>创建快捷方式</h2><p><img src="https://uploader.shimo.im/f/RMTLNANlMx0PLOoM.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/S0E27hLKbYg0T8TD.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/pYej9VjWKSI7cC2I.png!thumbnail" alt="图片"></p>
+<p>启动</p>
+<p><img src="https://uploader.shimo.im/f/hR2f5O4Yx5UpbX6a.png!thumbnail" alt="图片"></p>
+<hr>
+<h1 id="Resin"><a href="#Resin" class="headerlink" title="Resin"></a>Resin</h1><h2 id="JDK环境"><a href="#JDK环境" class="headerlink" title="JDK环境"></a>JDK环境</h2><h2 id="下载-5"><a href="#下载-5" class="headerlink" title="下载"></a>下载</h2><p><a href="http://caucho.com/products/resin/download/gpl#download">http://caucho.com/products/resin/download/gpl#download</a></p>
+<h2 id="解压-1"><a href="#解压-1" class="headerlink" title="解压"></a>解压</h2><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><h2 id="make"><a href="#make" class="headerlink" title="make"></a>make</h2><h2 id="makeinstall"><a href="#makeinstall" class="headerlink" title="makeinstall"></a>makeinstall</h2><h2 id="启动resin"><a href="#启动resin" class="headerlink" title="启动resin"></a>启动resin</h2><p>./bin/resin.sh start</p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>在浏览器打开<a href="http://localhost:8080/">http://localhost:8080</a></p>
+<hr>
+<h1 id="Oracle"><a href="#Oracle" class="headerlink" title="Oracle"></a>Oracle</h1><h1 id="CentOS-7-彻底卸载MySQL"><a href="#CentOS-7-彻底卸载MySQL" class="headerlink" title="CentOS 7 彻底卸载MySQL"></a>CentOS 7 彻底卸载MySQL</h1><h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><h3 id="查看安装的mysql相关的包"><a href="#查看安装的mysql相关的包" class="headerlink" title="查看安装的mysql相关的包"></a>查看安装的mysql相关的包</h3><p><img src="https://uploader.shimo.im/f/2gNW0kg4De4Repry.png!thumbnail" alt="图片"></p>
+<h3 id="卸载mysql相关包"><a href="#卸载mysql相关包" class="headerlink" title="卸载mysql相关包"></a>卸载mysql相关包</h3><p><img src="https://uploader.shimo.im/f/pFgAXTmqkW8a6bnr.png!thumbnail" alt="图片"></p>
+<h3 id="再次查看"><a href="#再次查看" class="headerlink" title="再次查看"></a>再次查看</h3><p><img src="https://uploader.shimo.im/f/v8yLOBbqmb8Sy7Ke.png!thumbnail" alt="图片"></p>
+<h3 id="再次卸载"><a href="#再次卸载" class="headerlink" title="再次卸载"></a>再次卸载</h3><p><img src="https://uploader.shimo.im/f/ZzuQDXfkxYovt7Mj.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/ozawWbTzbbUD3CrS.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/2jA28aQhh4IHOL7b.png!thumbnail" alt="图片"></p>
+<h3 id="卸载配置文件"><a href="#卸载配置文件" class="headerlink" title="卸载配置文件"></a>卸载配置文件</h3><h3 id="查找相关目录"><a href="#查找相关目录" class="headerlink" title="查找相关目录"></a>查找相关目录</h3><p><img src="https://uploader.shimo.im/f/OUYzvJXhCsYONYft.png!thumbnail" alt="图片"></p>
+<h3 id="删除相关目录"><a href="#删除相关目录" class="headerlink" title="删除相关目录"></a>删除相关目录</h3><p><img src="https://uploader.shimo.im/f/l1yRBgYCZh47ejZn.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/7MOuXrHD5R81LEAy.png!thumbnail" alt="图片"></p>
+<h3 id="删除日志文件"><a href="#删除日志文件" class="headerlink" title="删除日志文件"></a>删除日志文件</h3><p><img src="https://uploader.shimo.im/f/68J3OyUmMvc89IwQ.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/QXKF359Inncc4rv1.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/KEdPmaZAxKs67iO5.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/NYPI86ToNQADudx4.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/UtIzXls3cP4LzGnv.png!thumbnail" alt="图片"></p>
+<h3 id="删除mysql用户及用户组"><a href="#删除mysql用户及用户组" class="headerlink" title="删除mysql用户及用户组"></a>删除mysql用户及用户组</h3><p><img src="https://uploader.shimo.im/f/S9618jvZOZEIsCzg.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/MgFGoE0WKuUlZzkb.png!thumbnail" alt="图片"></p>
+<h2 id="重新安装"><a href="#重新安装" class="headerlink" title="重新安装"></a>重新安装</h2><p>参考资料</p>
+<p><a href="https://www.cnblogs.com/luckycn/p/7289995.html">https://www.cnblogs.com/luckycn/p/7289995.html</a></p>
+<h3 id="重新创建mysql的用户组和用户"><a href="#重新创建mysql的用户组和用户" class="headerlink" title="重新创建mysql的用户组和用户"></a>重新创建mysql的用户组和用户</h3><p><img src="https://uploader.shimo.im/f/B5EBkOLAvjIlPGHr.png!thumbnail" alt="图片"></p>
+<h3 id="更改mysql用户的密码为sly-root"><a href="#更改mysql用户的密码为sly-root" class="headerlink" title="更改mysql用户的密码为sly!root"></a>更改mysql用户的密码为sly!root</h3><p><img src="https://uploader.shimo.im/f/S632GRyePCAFd8F7.png!thumbnail" alt="图片"></p>
+<h3 id="修改安装文件的所属用户及用户组"><a href="#修改安装文件的所属用户及用户组" class="headerlink" title="修改安装文件的所属用户及用户组"></a>修改安装文件的所属用户及用户组</h3><p><img src="https://uploader.shimo.im/f/n0Sm781pm3ohRXLx.png!thumbnail" alt="图片"></p>
+<h3 id="下载yum-repo源"><a href="#下载yum-repo源" class="headerlink" title="下载yum repo源"></a>下载yum repo源</h3><p><img src="https://uploader.shimo.im/f/h6j9E0HdbKYaQwOf.png!thumbnail" alt="图片"></p>
+<h3 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h3><p><img src="https://uploader.shimo.im/f/W0mhmkk9qCwnxmAQ.png!thumbnail" alt="图片"></p>
+<h3 id="安装yum-repo源"><a href="#安装yum-repo源" class="headerlink" title="安装yum repo源"></a>安装yum repo源</h3><p><img src="https://uploader.shimo.im/f/jt71RMhySHQBUyAo.png!thumbnail" alt="图片"></p>
+<h3 id="添加mysql用户为sudoer"><a href="#添加mysql用户为sudoer" class="headerlink" title="添加mysql用户为sudoer"></a>添加mysql用户为sudoer</h3><p><img src="https://uploader.shimo.im/f/PfYl49qM3ZQzZDmE.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/UNTDoZmnNwwC9KDA.png!thumbnail" alt="图片"></p>
+<h3 id="添加内容如下"><a href="#添加内容如下" class="headerlink" title="添加内容如下"></a>添加内容如下</h3><p><img src="https://uploader.shimo.im/f/CTH2gXH0XUIX0Fnb.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/TYuIxIBHvvQafeS1.png!thumbnail" alt="图片"></p>
+<h3 id="再次安装repo源"><a href="#再次安装repo源" class="headerlink" title="再次安装repo源"></a>再次安装repo源</h3><p><img src="https://uploader.shimo.im/f/WXlutNlPOjstBHQh.png!thumbnail" alt="图片"></p>
+<h3 id="在-etc-yum-repos-d-生成以下文件"><a href="#在-etc-yum-repos-d-生成以下文件" class="headerlink" title="在/etc/yum.repos.d/生成以下文件"></a>在/etc/yum.repos.d/生成以下文件</h3><p><img src="https://uploader.shimo.im/f/Umc2cnyC28cpDwg3.png!thumbnail" alt="图片"></p>
+<h3 id="安装mysql-1"><a href="#安装mysql-1" class="headerlink" title="安装mysql"></a>安装mysql</h3><p><img src="https://uploader.shimo.im/f/DxNx0nrrvzYoDtbI.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/37lC1IuZFeAUWATr.png!thumbnail" alt="图片"></p>
+<h3 id="启动mysql服务"><a href="#启动mysql服务" class="headerlink" title="启动mysql服务"></a>启动mysql服务</h3><p><img src="https://uploader.shimo.im/f/oC6RQq80iUoIZHl1.png!thumbnail" alt="图片"></p>
+<h3 id="找到临时密码"><a href="#找到临时密码" class="headerlink" title="找到临时密码"></a>找到临时密码</h3><p><img src="https://uploader.shimo.im/f/6H1ZAt0yd2wZxyYz.png!thumbnail" alt="图片"></p>
+<p>登录mysql</p>
+<p><img src="https://uploader.shimo.im/f/BMYdzSZjIAIpyuNt.png!thumbnail" alt="图片"></p>
+<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><p><img src="https://uploader.shimo.im/f/qs0v6kqHZo0wRdLY.png!thumbnail" alt="图片"></p>
+<p>mysql配置文件</p>
+<p><img src="https://uploader.shimo.im/f/0dhOYmGQH10HMG1r.png!thumbnail" alt="图片"></p>
+<p>创建数据存放目录</p>
+<p><img src="https://uploader.shimo.im/f/oDUD0twF56snGp7n.png!thumbnail" alt="图片"></p>
+<p>安装libaio依赖库</p>
+<p><img src="https://uploader.shimo.im/f/UJEaC4f0O5YlsRlr.png!thumbnail" alt="图片"></p>
+<p>初始化mysql</p>
+<p><img src="https://uploader.shimo.im/f/2EzJ7FFRHcIIsIa4.png!thumbnail" alt="图片"></p>
+<p>启动mysql</p>
+<p><img src="https://uploader.shimo.im/f/xy6FftpDuSQXQpEf.png!thumbnail" alt="图片"></p>
+<p>创建mysql日志文件</p>
+<p><img src="https://uploader.shimo.im/f/R9pkXAT84fokPGmO.png!thumbnail" alt="图片"></p>
+<p>查看mysql初始密码</p>
+<p><img src="https://uploader.shimo.im/f/43LpT6jkJRAa0X8z.png!thumbnail" alt="图片"></p>
+<p>使用初始密码登录mysql</p>
+<p><img src="https://uploader.shimo.im/f/p6IyY7Pl7ggszdF8.png!thumbnail" alt="图片"></p>
+<p>设置mysql的root用户的密码为123456</p>
+<p><img src="https://uploader.shimo.im/f/tlk5haU6UOIr21Na.png!thumbnail" alt="图片"></p>
+<p>授权远程连接</p>
+<p><img src="https://uploader.shimo.im/f/WzDuORQiYwE4TJY5.png!thumbnail" alt="图片"></p>
+<p>设置mysql启动命令的链接</p>
+<p><img src="https://uploader.shimo.im/f/c4VM4i629nIetn8y.png!thumbnail" alt="图片"></p>
+<p>测试登录</p>
+<p><img src="https://uploader.shimo.im/f/IeEa2JCy1pwnyMOr.png!thumbnail" alt="图片"></p>
+<p>将mysqld服务加入开机自启动项</p>
+<p>将support-files/mysql.server服务脚本复制到/etc/init.d/，并重命名为mysqld</p>
+<p><img src="https://uploader.shimo.im/f/EAc8SnHqqGIm4QVz.png!thumbnail" alt="图片"></p>
+<p><img src="https://uploader.shimo.im/f/NMQSZvoz8CAsmpQS.png!thumbnail" alt="图片"></p>
+<p>通过chkconfig命令将mysqld服务加入到自启动服务项中</p>
+<p><img src="https://uploader.shimo.im/f/kn7V65Dnrj00ww4T.png!thumbnail" alt="图片"></p>
+<p>查看是否添加成功</p>
+<p><img src="https://uploader.shimo.im/f/M87gTZqh2DYjkgpN.png!thumbnail" alt="图片"></p>
+<p>重启系统，检查mysql服务是否启动</p>
+<p><img src="https://uploader.shimo.im/f/XfCQ1QJ90jQuPTqJ.png!thumbnail" alt="图片"></p>
+]]></content>
+  </entry>
+</search>
